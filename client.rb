@@ -1,6 +1,5 @@
 require 'twitter'
 require 'date'
-require 'yaml'
 require './config/setting'
 
 #require 'byebug'

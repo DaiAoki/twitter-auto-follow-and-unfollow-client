@@ -1,5 +1,15 @@
-#+TITLE: README
-#+OPTIONS: ^:{}
+* Autoフォロー/フォロー解除
+*** Why
+Twitterで特定の領域に興味関心のあるユーザーと交流したいけど、フォローワーを増やすのが面倒くさい。
+
+*** How
+自動で増やせたらよくね??
+
+*** What
+- Twitter APIを利用して、コマンド一つで自動でフォロー/フォロー解除できる。
+- configファイルの設定を変更することで、柔軟にフォローしたいユーザーの絞り込みを行うことができる
+
+-----
 
 * 環境構築
 ** gemのインストール
@@ -60,6 +70,8 @@ user:
 ruby confirm.rb
 #+END_SRC
 
+-----
+
 * 実行方法
 ** 自動フォロー
 #+BEGIN_SRC bash
@@ -70,6 +82,8 @@ ruby follow.rb 検索ワード 件数
 #+BEGIN_SRC bash
 ruby unfollow.rb
 #+END_SRC
+
+-----
 
 * 参考サイト
 - twitter gem公式
