@@ -32,13 +32,22 @@ Access Token Secret
 ** 認証情報の設定
 `config/config.yml` に必要な情報を設定する。
 *** authorization(必須)
-上記で取得した認証情報を設定する
+上記で取得した認証情報を設定する。(.envファイルを作成するか直接埋め込む)
+- .envファイルを下記のように作成する。
+#+BEGIN_SRC env
+CONSUMER_KEY=ここに記載する
+CONSUMER_SECRET=ここに記載する
+ACCESS_TOKEN=ここに記載する
+ACCESS_TOKEN_SECRET=ここに記載する
+#+END_SRC
+
+- 直接埋め込む場合 ＊ただし、直接埋め込んだ場合はGitHubなどのホスティングサービスで公開しないこと。
 #+BEGIN_SRC yml
 authorization:
-  consumer_key: please setting!!!
-  consumer_secret: please setting!!!
-  access_token: please setting!!!
-  access_token_secret: please setting!!!
+  consumer_key: <%= ENV['CONSUMER_KEY'] %>
+  consumer_secret: <%= ENV['CONSUMER_SECRET'] %>
+  access_token: <%= ENV['ACCESS_TOKEN'] %>
+  access_token_secret: <%= ENV['ACCESS_TOKEN_SECRET'] %>
 #+END_SRC
 
 *** client(任意)
