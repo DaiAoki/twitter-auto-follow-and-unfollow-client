@@ -3,7 +3,9 @@
 
 * 環境構築
 ** gemのインストール
-`gem install twitter    # https://github.com/sferik/twitter`
+#+BEGIN_SRC bash
+gem install twitter    # https://github.com/sferik/twitter
+#+END_SRC
 
 ** 認証情報の取得
 *** 1. Twitterアプリケーションの作成
@@ -50,14 +52,20 @@ user:
 #+END_SRC
 
 ** 開通確認
-`ruby confirm.rb`
+#+BEGIN_SRC bash
+ruby confirm.rb
+#+END_SRC
 
 * 実行方法
 ** 自動フォロー
-`ruby follow.rb 検索ワード 件数`
+#+BEGIN_SRC bash
+ruby follow.rb 検索ワード 件数
+#+END_SRC
 
 ** 自動アンフォロー
-`ruby unfollow.rb`
+#+BEGIN_SRC bash
+ruby unfollow.rb
+#+END_SRC
 
 * 参考サイト
 - twitter gem公式
