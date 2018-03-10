@@ -3,28 +3,33 @@
 
 * 環境構築
 ** gemのインストール
-gem install twitter    # https://github.com/sferik/twitter
+`gem install twitter    # https://github.com/sferik/twitter`
 
 ** 認証情報の取得
-1. Twitterアプリケーションの作成
+*** 1. Twitterアプリケーションの作成
 https://apps.twitter.com/
 
-2. Keys and Access Tokens
+*** Keys and Access Tokens
 Consumer Key
 Consumer Secret
 
-3. Create my access token
+*** Create my access token
 Access Token
 Access Token Secret
 
 ** 認証情報の設定
 `config/config.yml` に必要な情報を設定する。
-`authorization` は必須で、上記で取得した認証情報を設定する
+*** authorization(必須)
+上記で取得した認証情報を設定する
 
-下記は任意項目。
-`client`は、フォロー時のデフォルトツイート検索ワード、フォロー数、ツイート期間(何日前か)
-`tweet`は、フォローするかどうかの判定時のツイートファボ閾値
-`user`は、フォローするかどうかの判定時のフォロワー数とフォロー数の閾値
+*** client(任意)
+フォロー時のデフォルトツイート検索ワード、フォロー数、ツイート期間(何日前か)
+
+*** tweet(任意)
+フォローするかどうかの判定時のツイートファボ閾値
+
+*** user(任意)
+フォローするかどうかの判定時のフォロワー数とフォロー数の閾値
 
 # 下記に取得した認証情報を設定する
 #+BEGIN_SRC yml
@@ -45,14 +50,14 @@ user:
 #+END_SRC
 
 ** 開通確認
-ruby confirm.rb
+`ruby confirm.rb`
 
 * 実行方法
 ** 自動フォロー
-ruby follow.rb 検索ワード 件数
+`ruby follow.rb 検索ワード 件数`
 
 ** 自動アンフォロー
-ruby unfollow.rb
+`ruby unfollow.rb`
 
 * 参考サイト
 - twitter gem公式
