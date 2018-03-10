@@ -43,10 +43,9 @@ class MyTwitterClient
       tweet_obj = Tweet.new(tweet)
       user_obj  = User.new(tweet.user)
 
-      next unless worth_following?(tweet: tweet_obj, user: user_obj)
+      next if !worth_following?(tweet: tweet_obj, user: user_obj) && ( already_followed?(user_obj.id) || already_following?(user_obj.id) )
 
       begin
-        next if already_followed?(user_obj.id) || already_following?(user_obj.id)
         client.follow(user_obj.id)
       rescue => e
         p e
