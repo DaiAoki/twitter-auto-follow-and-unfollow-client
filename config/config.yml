@@ -5,7 +5,7 @@ authorization:
   access_token_secret: please setting!!!
 client:
   default_search_word: プログラミング
-  default_search_count: 50
+  default_search_count: 80
   default_search_term: 7
 tweet:
   favorite_threshold_count: 1
