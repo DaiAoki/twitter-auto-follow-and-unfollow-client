@@ -1,0 +1,45 @@
+#+TITLE: README
+#+OPTIONS: ^:{}
+
+* 環境構築
+** gemのインストール
+gem install twitter    # https://github.com/sferik/twitter
+
+** 認証情報の取得
+1. Twitterアプリケーションの作成
+https://apps.twitter.com/
+
+2. Keys and Access Tokens
+Consumer Key
+Consumer Secret
+
+3. Create my access token
+Access Token
+Access Token Secret
+
+** 認証情報の設定
+#+BEGIN_SRC ruby
+client = Twitter::REST::Client.new do |config|
+  # 下記に取得した認証情報を設定する
+  config.consumer_key        = "Consumer Key"
+  config.consumer_secret     = "Consumer Secret"
+  config.access_token        = "Access Token"
+  config.access_token_secret = "Access Token Secret"
+end
+#+END_SRC
+
+** 開通確認
+ruby confirm.rb
+
+* 実行方法
+** 自動フォロー
+ruby follow.rb 検索ワード 件数
+
+** 自動アンフォロー
+ruby unfollow.rb
+
+* 参考サイト
+- twitter gem公式
+https://github.com/sferik/twitter
+- リファレンス
+https://syncer.jp/Web/API/Twitter/REST_API/
