@@ -3,8 +3,8 @@ require 'date'
 require 'yaml'
 require './config/setting'
 
-require 'byebug'
-require 'pry'
+#require 'byebug'
+#require 'pry'
 
 Dir[File.expand_path('../modules', __FILE__) << '/*.rb'].each do |file|
   require file
