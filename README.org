@@ -23,29 +23,33 @@ Access Token Secret
 `config/config.yml` に必要な情報を設定する。
 *** authorization(必須)
 上記で取得した認証情報を設定する
-
-*** client(任意)
-フォロー時のデフォルトツイート検索ワード、フォロー数、ツイート期間(何日前か)
-
-*** tweet(任意)
-フォローするかどうかの判定時のツイートファボ閾値
-
-*** user(任意)
-フォローするかどうかの判定時のフォロワー数とフォロー数の閾値
-
-# 下記に取得した認証情報を設定する
 #+BEGIN_SRC yml
 authorization:
   consumer_key: please setting!!!
   consumer_secret: please setting!!!
   access_token: please setting!!!
   access_token_secret: please setting!!!
+#+END_SRC
+
+*** client(任意)
+フォロー時のデフォルトツイート検索ワード、フォロー数、ツイート期間(何日前か)
+#+BEGIN_SRC yml
 client:
   default_search_word: プログラミング
   default_search_count: 10
   default_search_term: 7
+#+END_SRC
+
+*** tweet(任意)
+フォローするかどうかの判定時のツイートファボ閾値
+#+BEGIN_SRC yml
 tweet:
   favorite_threshold_count: 1
+#+END_SRC
+
+*** user(任意)
+フォローするかどうかの判定時のフォロワー数とフォロー数の閾値
+#+BEGIN_SRC yml
 user:
   followers_threshold_count: 80
   friends_threshold_count: 80
