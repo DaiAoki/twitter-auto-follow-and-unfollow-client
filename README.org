@@ -90,3 +90,9 @@ ruby unfollow.rb
 https://github.com/sferik/twitter
 - リファレンス
 https://syncer.jp/Web/API/Twitter/REST_API/
+
+-----
+
+* バグ/改良点
+- 実行しすぎると、Twitter::Error::TooManyRequests: Rate limit exceeded のエラー発生します。
+=> どなたか直してプルリク投げてください。
