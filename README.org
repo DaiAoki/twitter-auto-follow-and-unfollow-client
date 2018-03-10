@@ -11,11 +11,11 @@ gem install twitter    # https://github.com/sferik/twitter
 *** 1. Twitterアプリケーションの作成
 https://apps.twitter.com/
 
-*** Keys and Access Tokens
+*** 2. Keys and Access Tokens
 Consumer Key
 Consumer Secret
 
-*** Create my access token
+*** 3. Create my access token
 Access Token
 Access Token Secret
 
